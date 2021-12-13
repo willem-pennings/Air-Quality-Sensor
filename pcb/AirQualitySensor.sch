@@ -1,0 +1,487 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L AirQualitySensor-rescue:USB_C_Plug_USB2.0-Connector P1
+U 1 1 60355298
+P 1300 1700
+F 0 "P1" H 1407 2567 50  0000 C CNN
+F 1 "USB_C_Plug_USB2.0" H 1407 2476 50  0000 C CNN
+F 2 "AirQualitySensor:USB-C" H 1450 1700 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1450 1700 50  0001 C CNN
+	1    1300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L AirQualitySensor-rescue:SCD30-SCD30 U2
+U 1 1 603593F7
+P 5800 1500
+F 0 "U2" H 5800 2165 50  0000 C CNN
+F 1 "SCD30" H 5800 2074 50  0000 C CNN
+F 2 "AirQualitySensor:SCD30" H 5800 1500 50  0001 L BNN
+F 3 "" H 5800 1500 50  0001 L BNN
+F 4 "7.0mm" H 5800 1500 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 5 "Manufacturer Recommendations" H 5800 1500 50  0001 L BNN "STANDARD"
+F 6 "D1" H 5800 1500 50  0001 L BNN "PARTREV"
+F 7 "Sensirion" H 5800 1500 50  0001 L BNN "MANUFACTURER"
+	1    5800 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L AirQualitySensor:SPS30 U3
+U 1 1 6035ACCF
+P 5800 2900
+F 0 "U3" H 5522 2554 50  0000 R CNN
+F 1 "SPS30" H 5522 2645 50  0000 R CNN
+F 2 "AirQualitySensor:PinHeader_SPS" H 5800 2900 50  0001 C CNN
+F 3 "" H 5800 2900 50  0001 C CNN
+	1    5800 2900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 6035B427
+P 1300 2850
+F 0 "#PWR01" H 1300 2600 50  0001 C CNN
+F 1 "GND" H 1305 2677 50  0000 C CNN
+F 2 "" H 1300 2850 50  0001 C CNN
+F 3 "" H 1300 2850 50  0001 C CNN
+	1    1300 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2700 1300 2850
+Wire Wire Line
+	1300 2600 1300 2700
+Connection ~ 1300 2700
+NoConn ~ 1900 1600
+NoConn ~ 1900 1800
+$Comp
+L Device:R R1
+U 1 1 6035C4DA
+P 2050 1650
+F 0 "R1" V 1843 1650 50  0000 C CNN
+F 1 "5.1K 10%" V 1934 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1980 1650 50  0001 C CNN
+F 3 "~" H 2050 1650 50  0001 C CNN
+	1    2050 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 1300 2050 1300
+Wire Wire Line
+	2050 1300 2050 1500
+Wire Wire Line
+	2050 1800 2050 1950
+Wire Wire Line
+	2050 2700 1300 2700
+Wire Wire Line
+	2050 1100 1900 1100
+Wire Wire Line
+	5200 1500 5100 1500
+Wire Wire Line
+	5200 1600 5100 1600
+Wire Wire Line
+	5450 2600 5350 2600
+Wire Wire Line
+	5450 2700 5350 2700
+Wire Wire Line
+	5350 2800 5450 2800
+Wire Wire Line
+	6400 1100 6500 1100
+$Comp
+L power:GND #PWR04
+U 1 1 60369DB4
+P 5000 2600
+F 0 "#PWR04" H 5000 2350 50  0001 C CNN
+F 1 "GND" H 5005 2427 50  0000 C CNN
+F 2 "" H 5000 2600 50  0001 C CNN
+F 3 "" H 5000 2600 50  0001 C CNN
+	1    5000 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2400 5000 2400
+Wire Wire Line
+	5000 2400 5000 2500
+Wire Wire Line
+	5450 2500 5000 2500
+Connection ~ 5000 2500
+Wire Wire Line
+	5000 2500 5000 2600
+NoConn ~ 6400 1300
+$Comp
+L power:GND #PWR05
+U 1 1 6036B300
+P 6500 1900
+F 0 "#PWR05" H 6500 1650 50  0001 C CNN
+F 1 "GND" H 6505 1727 50  0000 C CNN
+F 2 "" H 6500 1900 50  0001 C CNN
+F 3 "" H 6500 1900 50  0001 C CNN
+	1    6500 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 1800 6500 1800
+Wire Wire Line
+	6500 1800 6500 1900
+Wire Wire Line
+	6400 1500 6500 1500
+Text GLabel 2050 1100 2    50   Input ~ 0
+VDD
+Text GLabel 4450 2450 2    50   Input ~ 0
+VDD
+Text GLabel 6500 1100 2    50   Input ~ 0
+VDD
+Text GLabel 5350 2800 0    50   Input ~ 0
+VDD
+Text GLabel 5100 1600 0    50   Input ~ 0
+SDA
+Text GLabel 5350 2700 0    50   Input ~ 0
+SDA
+Text GLabel 5100 1500 0    50   Input ~ 0
+SCL
+Text GLabel 5350 2600 0    50   Input ~ 0
+SCL
+Text GLabel 6500 1500 2    50   Input ~ 0
+RDY
+Text GLabel 2650 3250 0    50   Input ~ 0
+RDY
+Text GLabel 2650 3750 0    50   Input ~ 0
+SDA
+Text GLabel 2650 3850 0    50   Input ~ 0
+SCL
+Wire Wire Line
+	2750 3850 2650 3850
+Wire Wire Line
+	2750 3750 2650 3750
+$Comp
+L power:GND #PWR06
+U 1 1 60379F1A
+P 4450 5150
+F 0 "#PWR06" H 4450 4900 50  0001 C CNN
+F 1 "GND" H 4455 4977 50  0000 C CNN
+F 2 "" H 4450 5150 50  0001 C CNN
+F 3 "" H 4450 5150 50  0001 C CNN
+	1    4450 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60389243
+P 2350 1650
+F 0 "R2" V 2143 1650 50  0000 C CNN
+F 1 "5.1K 10%" V 2234 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 1650 50  0001 C CNN
+F 3 "~" H 2350 1650 50  0001 C CNN
+	1    2350 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 1400 2350 1400
+Wire Wire Line
+	2350 1400 2350 1500
+Wire Wire Line
+	2350 1800 2350 1950
+Wire Wire Line
+	2350 1950 2050 1950
+Connection ~ 2050 1950
+Wire Wire Line
+	2050 1950 2050 2700
+$Comp
+L power:GND #PWR03
+U 1 1 6036BD9C
+P 5100 1300
+F 0 "#PWR03" H 5100 1050 50  0001 C CNN
+F 1 "GND" H 5105 1127 50  0000 C CNN
+F 2 "" H 5100 1300 50  0001 C CNN
+F 3 "" H 5100 1300 50  0001 C CNN
+	1    5100 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 1300 5200 1300
+$Comp
+L AirQualitySensor:SGP40_Adafruit U4
+U 1 1 603856DB
+P 7400 2600
+F 0 "U4" H 7578 2651 50  0000 L CNN
+F 1 "SGP40_Adafruit" H 7578 2560 50  0000 L CNN
+F 2 "AirQualitySensor:SGP40_Adafruit" H 7400 2600 50  0001 C CNN
+F 3 "" H 7400 2600 50  0001 C CNN
+	1    7400 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 7050 2700 0    50   Input ~ 0
+SCL
+Text GLabel 7050 2800 0    50   Input ~ 0
+SDA
+Text GLabel 7050 2400 0    50   Input ~ 0
+VDD
+$Comp
+L power:GND #PWR08
+U 1 1 60386578
+P 7050 2600
+F 0 "#PWR08" H 7050 2350 50  0001 C CNN
+F 1 "GND" H 7055 2427 50  0000 C CNN
+F 2 "" H 7050 2600 50  0001 C CNN
+F 3 "" H 7050 2600 50  0001 C CNN
+	1    7050 2600
+	0    1    1    0   
+$EndComp
+NoConn ~ 7150 2500
+Wire Wire Line
+	7050 2400 7150 2400
+Wire Wire Line
+	7050 2700 7150 2700
+Wire Wire Line
+	7050 2800 7150 2800
+Wire Wire Line
+	7050 2600 7150 2600
+NoConn ~ 1000 2600
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 60396ABE
+P 7600 1000
+F 0 "J1" H 7680 1042 50  0000 L CNN
+F 1 "Conn_01x01" H 7680 951 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 7600 1000 50  0001 C CNN
+F 3 "~" H 7600 1000 50  0001 C CNN
+	1    7600 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 60397339
+P 7600 1200
+F 0 "J2" H 7680 1242 50  0000 L CNN
+F 1 "Conn_01x01" H 7680 1151 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 7600 1200 50  0001 C CNN
+F 3 "~" H 7600 1200 50  0001 C CNN
+	1    7600 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 6039762F
+P 7600 1400
+F 0 "J3" H 7680 1442 50  0000 L CNN
+F 1 "Conn_01x01" H 7680 1351 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 7600 1400 50  0001 C CNN
+F 3 "~" H 7600 1400 50  0001 C CNN
+	1    7600 1400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7400 1000
+NoConn ~ 7400 1200
+NoConn ~ 7400 1400
+$Comp
+L AirQualitySensor:WaveShareDisplay-200x200 U5
+U 1 1 603EDF39
+P 5750 3450
+F 0 "U5" H 5978 3501 50  0000 L CNN
+F 1 "WaveShareDisplay-200x200" H 5978 3410 50  0000 L CNN
+F 2 "AirQualitySensor:PinHeader_Waveshare_Display" H 5550 3450 50  0001 C CNN
+F 3 "" H 5550 3450 50  0001 C CNN
+	1    5750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 603F2493
+P 5000 3750
+F 0 "#PWR0101" H 5000 3500 50  0001 C CNN
+F 1 "GND" H 5005 3577 50  0000 C CNN
+F 2 "" H 5000 3750 50  0001 C CNN
+F 3 "" H 5000 3750 50  0001 C CNN
+	1    5000 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3800 5450 3800
+Wire Wire Line
+	5450 3700 5000 3700
+Wire Wire Line
+	5000 3700 5000 3750
+$Comp
+L AirQualitySensor-rescue:ESP32-PICO-KIT-ESP32-PICO-KIT U1
+U 1 1 603F3CB4
+P 3550 3650
+F 0 "U1" H 3550 5317 50  0000 C CNN
+F 1 "ESP32-PICO-KIT" H 3550 5226 50  0000 C CNN
+F 2 "ESP32-DevkitC-32D:XCVR_ESP32-PICO-KIT" H 3550 3650 50  0001 L BNN
+F 3 "" H 3550 3650 50  0001 L BNN
+F 4 "4.1" H 3550 3650 50  0001 L BNN "PARTREV"
+F 5 "Espressif Systems" H 3550 3650 50  0001 L BNN "MANUFACTURER"
+F 6 "Esp32 Wifi Bluetooth Eval Board" H 3550 3650 50  0001 L BNN "DESCRIPTION"
+	1    3550 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4450 2250 2    50   Input ~ 0
+3V3
+Text GLabel 5350 3600 0    50   Input ~ 0
+CLK
+Text GLabel 5350 3500 0    50   Input ~ 0
+DIN
+Text GLabel 5350 3400 0    50   Input ~ 0
+CS
+Text GLabel 5350 3300 0    50   Input ~ 0
+DC
+Text GLabel 5350 3200 0    50   Input ~ 0
+BUSY
+Text GLabel 5350 3100 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	4450 2250 4400 2250
+Wire Wire Line
+	4400 2250 4400 2350
+Wire Wire Line
+	4400 2350 4350 2350
+Wire Wire Line
+	4400 2250 4350 2250
+Connection ~ 4400 2250
+Wire Wire Line
+	4450 2450 4350 2450
+Text GLabel 5350 3800 0    50   Input ~ 0
+VDD
+Wire Wire Line
+	5350 3600 5450 3600
+Wire Wire Line
+	5350 3500 5450 3500
+Wire Wire Line
+	5350 3400 5450 3400
+Wire Wire Line
+	5350 3300 5450 3300
+Wire Wire Line
+	5350 3200 5450 3200
+Wire Wire Line
+	5350 3100 5450 3100
+Wire Wire Line
+	4350 4950 4450 4950
+Wire Wire Line
+	4450 4950 4450 5050
+Wire Wire Line
+	4350 5050 4450 5050
+Connection ~ 4450 5050
+Wire Wire Line
+	4450 5050 4450 5150
+Wire Wire Line
+	2650 3250 2750 3250
+Text GLabel 2650 4050 0    50   Input ~ 0
+CLK
+Text GLabel 2650 4350 0    50   Input ~ 0
+DIN
+Text GLabel 2650 4450 0    50   Input ~ 0
+CS
+Text GLabel 2650 4250 0    50   Input ~ 0
+DC
+Text GLabel 2650 3350 0    50   Input ~ 0
+BUSY
+Text GLabel 2650 2750 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	2650 4050 2750 4050
+Wire Wire Line
+	2650 4350 2750 4350
+Wire Wire Line
+	2650 4450 2750 4450
+Wire Wire Line
+	2650 4250 2750 4250
+Wire Wire Line
+	2650 3350 2750 3350
+Wire Wire Line
+	2650 2750 2750 2750
+NoConn ~ 2750 2550
+NoConn ~ 2750 2650
+NoConn ~ 2750 2850
+NoConn ~ 2750 2950
+NoConn ~ 2750 3050
+NoConn ~ 2750 3450
+NoConn ~ 2750 3550
+NoConn ~ 2750 3650
+NoConn ~ 2750 3950
+NoConn ~ 2750 4150
+NoConn ~ 2750 4550
+NoConn ~ 2750 4650
+NoConn ~ 2750 4750
+NoConn ~ 2750 4850
+NoConn ~ 4350 2950
+NoConn ~ 4350 3150
+NoConn ~ 4350 3250
+NoConn ~ 4350 3350
+NoConn ~ 4350 3450
+NoConn ~ 4350 3550
+NoConn ~ 4350 3650
+NoConn ~ 4350 3850
+NoConn ~ 4350 3950
+NoConn ~ 4350 4150
+NoConn ~ 4350 4250
+NoConn ~ 2750 3150
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 6040CD62
+P 7600 1600
+F 0 "J4" H 7680 1642 50  0000 L CNN
+F 1 "Conn_01x01" H 7680 1551 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 7600 1600 50  0001 C CNN
+F 3 "~" H 7600 1600 50  0001 C CNN
+	1    7600 1600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7400 1600
+Text GLabel 3100 1000 0    50   Input ~ 0
+3V3
+$Comp
+L Device:R R3
+U 1 1 604146B1
+P 3350 1250
+F 0 "R3" H 3420 1296 50  0000 L CNN
+F 1 "R" H 3420 1205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3280 1250 50  0001 C CNN
+F 3 "~" H 3350 1250 50  0001 C CNN
+	1    3350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60414ABE
+P 3600 1250
+F 0 "R4" H 3670 1296 50  0000 L CNN
+F 1 "R" H 3670 1205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3530 1250 50  0001 C CNN
+F 3 "~" H 3600 1250 50  0001 C CNN
+	1    3600 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1000 3350 1000
+Wire Wire Line
+	3350 1000 3350 1100
+Wire Wire Line
+	3350 1000 3600 1000
+Wire Wire Line
+	3600 1000 3600 1100
+Connection ~ 3350 1000
+Text GLabel 3350 1500 3    50   Input ~ 0
+SCL
+Text GLabel 3600 1500 3    50   Input ~ 0
+SDA
+Wire Wire Line
+	3600 1400 3600 1500
+Wire Wire Line
+	3350 1400 3350 1500
+Text Notes 3350 900  0    50   ~ 0
+I2C PULLUPS
+$EndSCHEMATC

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name AirQualitySensor)(type Legacy)(uri ${KIPRJMOD}/AirQualitySensor.lib)(options "")(descr ""))
+  (lib (name AirQualitySensor-rescue)(type Legacy)(uri ${KIPRJMOD}/AirQualitySensor-rescue.lib)(options "")(descr ""))
+)
